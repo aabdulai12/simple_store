@@ -1,7 +1,7 @@
-# app/controllers/products_controller.rb
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    # Load products along with their associated categories to avoid N+1 problem
+    @products = Product.includes(:category).all
   end
 
   def show

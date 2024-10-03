@@ -1,8 +1,8 @@
 <h1>Products</h1>
 
-<ul style="list-style-type: none; padding: 0;">
+<ul>
   <% @products.each do |product| %>
-    <li style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <li>
       <h2><%= link_to product.title, product_path(product) %></h2>
       <p><strong>Price:</strong> <%= number_to_currency(product.price) %></p>
       <p><strong>Stock:</strong> <%= product.stock_quantity %></p>
@@ -10,4 +10,3 @@
     </li>
   <% end %>
 </ul>
-
