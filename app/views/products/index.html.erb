@@ -1,12 +1,12 @@
 <h1>Products</h1>
 
-<ul>
+<ul style="list-style-type: none; padding: 0;">
   <% @products.each do |product| %>
-    <li>
-      <%= link_to product.title, product_path(product) %> -
-      <%= product.price %> -
-      <%= product.stock_quantity %> -
-      Category: <%= product.category.name %>
+    <li style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <h2><%= link_to product.title, product_path(product) %></h2>
+      <p><strong>Price:</strong> <%= number_to_currency(product.price) %></p>
+      <p><strong>Stock:</strong> <%= product.stock_quantity %></p>
+      <p><strong>Category:</strong> <%= product.category.name %></p>
     </li>
   <% end %>
 </ul>

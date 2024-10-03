@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+ ul.products-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.products-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul.products-list h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+ul.products-list p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
